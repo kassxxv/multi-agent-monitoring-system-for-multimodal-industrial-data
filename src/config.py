@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 class SignalConfig(BaseModel):
     """Configuration for one monitored signal; source column, unit and detector settings."""
-
+    window: int
     model_config = {"extra": "forbid"}
     internal_name: str
     source_column: str

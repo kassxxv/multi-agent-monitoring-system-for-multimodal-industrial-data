@@ -1,0 +1,15 @@
+machine_id: T01
+data_path: data/edp-wind-scada/T01_F99.xlsx
+signals: 
+  - window: 36
+    internal_name: gear_oil_temp
+    source_column: Gear_Oil_Temp_Avg
+    unit: °C
+    method: rolling_zscore
+    threshold: 3.0
+  - window: 36
+    internal_name: gear_bear_temp
+    source_column: Gear_Bear_Temp_Avg
+    unit: °C
+    method: rolling_zscore
+    threshold: 3.0
